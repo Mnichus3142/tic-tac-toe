@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Tick-tack-toe</title>
+		<link href="css/main.css" rel="stylesheet" type="text/css">
+		<link href="css/dark.css" rel="stylesheet" type="text/css" id="theme">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="switch">
+			<div id="ico" class="ico"> 
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.993,3a9.326,9.326,0,0,0-1.138,4.477,8.8,8.8,0,0,0,8.569,9.015c.2,0,.385-.017.576-.03A8.5,8.5,0,0,1,12.569,21,8.8,8.8,0,0,1,4,11.985,8.83,8.83,0,0,1,11.993,3Z"/></svg>
+			</div>
+		</div>
+		<div>
+			<table class="content">
+				<tr>
+					<td style="border-right: var(--main) 5px solid; border-bottom: var(--main) 5px solid; border-top-left-radius: var(--border-radius);" id="1">
+
+					</td>
+					<td style="border-right: var(--main) 5px solid; border-left: var(--main) 5px solid;
+					border-bottom: var(--main) 5px solid;"  id="2">
+
+					</td>
+					<td style="border-left: var(--main) 5px solid; border-bottom: var(--main) 5px solid; border-top-right-radius: var(--border-radius);" id="3">
+
+					</td>
+				</tr>
+				<tr>
+					<td style="border-top: var(--main) 5px solid; border-right: var(--main) 5px solid; border-bottom: var(--main) 5px solid;" id="4">
+
+					</td>
+					<td style="border-top: var(--main) 5px solid; border-right: var(--main) 5px solid; border-left: var(--main) 5px solid;border-bottom: var(--main) 5px solid;"  id="5">
+
+					</td>
+					<td style="border-left: var(--main) 5px solid; border-bottom: var(--main) 5px solid; border-top: var(--main) 5px solid;" id="6">
+
+					</td>
+				</tr>
+				<tr>
+					<td style="border-top: var(--main) 5px solid; border-right: var(--main) 5px solid; border-bottom-left-radius: var(--border-radius);"  id="7">
+
+					</td>
+					<td style="border-top: var(--main) 5px solid; border-right: var(--main) 5px solid; border-left: var(--main) 5px solid;" id="8">
+
+					</td>
+					<td style="border-left: var(--main) 5px solid;border-top: var(--main) 5px solid; border-bottom-right-radius: var(--border-radius);" id="9">
+
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="menu">
+			<input type="button" id="start" value="Start">
+			<input type="button" id="x" value="I choose: X" class="game">
+			<input type="button" id="o" value="I choose: O" class="game">
+			<input type="button" id="reset" value="Reset">
+		</div>
+	</body>
+	<script src="js/theme.js"></script>
+	<script src="js/game.js"></script>
+</html>

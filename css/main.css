@@ -1,0 +1,125 @@
+:root {
+    --border-radius: 30px;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.ico {
+    height: 4vh;
+    width: 4vw;
+
+    position: absolute;
+    right: 1vw;
+    top: 1vw;
+
+    cursor: pointer;
+}
+
+.ico:hover {
+    transform: scale(120%);
+
+    transition: all 0.5s ease;
+}
+
+.ico:not(:hover) {
+    transition: all 0.5s ease;
+}
+
+.content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+table {
+    text-align: center;
+
+    border-spacing: 40px;
+}
+
+td {
+    width: 8vw;
+    height: 8vw;
+
+    color: var(--main);
+
+    font-size: 200%;
+    font-weight: bolder;
+
+    transition: all 0.5s ease;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+td:hover {
+    background-color: var(--background-hover);
+    color: var(--color-hover);
+
+    transition: all 0.5s ease;
+}
+
+svg {
+    fill: var(--main);
+
+    transition: all 0.5s ease;
+}
+
+body {
+    background-color: var(--background);
+    transition: all 0.5s ease;
+}
+
+.menu {
+    position: absolute;
+    bottom: 5vh;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+
+    color: var(--main);
+    font-size: 170%;
+
+    padding: 10px;
+}
+
+.menu input[type="button"] {
+    border:  var(--main) 5px solid;
+    border-radius: 5px;
+
+    color: var(--background);
+    font-weight: bold;
+
+    background-color: var(--main);
+
+    padding: 10px;
+
+    cursor: pointer;
+
+    float: left;
+
+    margin: 10px;
+
+    transition: all 0.5s ease;
+}
+
+.menu input[type="button"]:hover {
+    transform: scale(120%);
+
+    transition: all 0.5s ease;
+}
+
+.game {
+    display: none;
+}
