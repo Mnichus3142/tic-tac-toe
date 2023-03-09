@@ -1,4 +1,4 @@
-# tic-tac-toe
+# Tic Tac Toe
 
 Checklist:
 - Light and dark theme ✔
