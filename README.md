@@ -7,3 +7,7 @@ Checklist:
 - Basic actions performed by the computer ✔
 - Winning conditions ✔
 - Winning or loosing alert ✔
+
+TODO:
+- Visual improvements ❌
+- Draw condition ❌
