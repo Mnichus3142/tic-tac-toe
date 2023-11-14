@@ -7,4 +7,3 @@ Checklist:
 - Basic actions performed by the computer ✔
 - Winning conditions ❌
 - Winning or loosing alert ❌
-- More logic computer actions ❌
