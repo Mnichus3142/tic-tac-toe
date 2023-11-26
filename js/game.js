@@ -1,3 +1,4 @@
+// Sets in which numbers of squares are stored
 const occupied = new Set()
 const occupiedX = new Set()
 const occupiedO = new Set()
@@ -66,16 +67,22 @@ function result ()
 			return 'X'
 		}
 	}
+
+	if (occupied.size == 9)
+	{
+		winningAlert('Draw')
+		return 0
+	}
 }
 
-function winningAlert (mark)
+function winningAlert (sentence)
 {
 	document.querySelector('.gamebox').style.display = 'none'
 	
 	setTimeout(function ()
 	{
 		document.querySelector('.gameover').style.display = 'block'
-		document.getElementById('winner').innerHTML = mark
+		document.getElementById('winner').innerHTML = sentence
 	}, 300)
 }
 
@@ -101,7 +108,7 @@ function computer ()
 			if (condition == 'O') {
 				setTimeout(function ()
 				{
-					winningAlert('Computer')
+					winningAlert('Computer won the game')
 				}, 500)
 			}
 		}
@@ -114,7 +121,7 @@ function computer ()
 			if (condition == 'X') {
 				setTimeout(function ()
 				{
-					winningAlert('Computer')
+					winningAlert('Computer won the game')
 				}, 500)
 			}
 		}
@@ -122,7 +129,15 @@ function computer ()
 
 	else
 	{
-		computer()
+		if (occupied.size != 9)
+		{
+			computer()
+		}
+
+		else 
+		{
+			return 0
+		}
 	}
 }
 
@@ -147,7 +162,7 @@ function action (id, mark)
 			if (condition == 'X') {
 				setTimeout(function ()
 				{
-					winningAlert('You')
+					winningAlert('You won the game')
 				}, 500)
 			}
 		}
@@ -160,7 +175,7 @@ function action (id, mark)
 			if (condition == 'O') {
 				setTimeout(function ()
 				{
-					winningAlert('You')
+					winningAlert('You won the game')
 				}, 500)
 			}
 		}
@@ -184,11 +199,6 @@ document.querySelectorAll('.reset').forEach(function(button)
 		document.getElementById('o').style.display = 'none'
 		document.querySelector('.gamebox').style.display = 'block'
 		document.querySelector('.gameover').style.display = 'none'
-
-		document.getElementById('1').style.borderTopLeftRadius = '30px'
-		document.getElementById('3').style.borderTopRightRadius = '30px'
-		document.getElementById('7').style.borderBottomLeftRadius = '30px'
-		document.getElementById('9').style.borderBottomrightRadius = '30px'
 
 		for (i = 1; i <= 9; i++) {
 			document.getElementById(i).setAttribute('onclick', 'nothing()')

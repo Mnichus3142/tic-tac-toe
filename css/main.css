@@ -31,7 +31,7 @@
 
     background-color: var(--main);
     border-radius: 30px;
-    height: fit-content;
+    height: 17vh;
     width: fit-content;
 
     padding: 40px;
@@ -49,8 +49,12 @@
 
     background-color: var(--background);
 
-    position: relative;
-    left: 21%;
+    width: fit-content;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .gameover[style*="display: block"] {
