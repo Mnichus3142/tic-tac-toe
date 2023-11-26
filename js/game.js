@@ -3,11 +3,15 @@ const occupied = new Set()
 const occupiedX = new Set()
 const occupiedO = new Set()
 
+// Winning conditions
 const WC = ['123', '456', '789', '147', '258', '369', '159', '357']
 
+
+// Which mark who is using
 var mark
 var markComputer
 
+// Adding elements to board
 function addElements (mark)
 {
 	for (i = 1; i <= 9; i++) 
@@ -21,6 +25,7 @@ function addElements (mark)
 	}
 }
 
+// Removing hover effects on activated squares
 function removeHover (id) 
 {
 	document.getElementById(id).style.setProperty('--background-hover', 'var(--background)')
@@ -29,6 +34,7 @@ function removeHover (id)
 	document.getElementById(id).style.cursor = 'default'
 }
 
+// Creating random numbers
 function randomNumber (min, max) 
 { 
 	min = Math.ceil(min)
@@ -36,6 +42,7 @@ function randomNumber (min, max)
     return Math.floor(Math.random() * (max - min + 1)) + min
 } 
 
+// Result
 function result ()
 {
 	let counterO = 0
@@ -75,6 +82,7 @@ function result ()
 	}
 }
 
+// Creating alert
 function winningAlert (sentence)
 {
 	document.querySelector('.gamebox').style.display = 'none'
@@ -86,6 +94,7 @@ function winningAlert (sentence)
 	}, 300)
 }
 
+// Computer logic
 function computer () 
 {
 	const id = randomNumber(1, 9)
@@ -141,6 +150,7 @@ function computer ()
 	}
 }
 
+// Making actions after click
 function action (id, mark)
 {
 	area = document.getElementById(id)
@@ -184,6 +194,7 @@ function action (id, mark)
 	}
 }
 
+// Start button action
 document.getElementById('start').addEventListener('click', () =>
 {
 	document.getElementById('start').style.display = 'none'
@@ -191,6 +202,7 @@ document.getElementById('start').addEventListener('click', () =>
 	document.getElementById('o').style.display = 'block'
 })
 
+// Reset button action
 document.querySelectorAll('.reset').forEach(function(button) 
 {
 	button.addEventListener('click', () => {
@@ -214,6 +226,7 @@ document.querySelectorAll('.reset').forEach(function(button)
 	})
 })
 
+// Choosing x for player
 document.getElementById('x').addEventListener('click', () => 
 {
 	mark = 'x'
@@ -225,6 +238,7 @@ document.getElementById('x').addEventListener('click', () =>
 	document.getElementById('o').style.display = 'none'
 })  
 
+// Choosing o for player
 document.getElementById('o').addEventListener('click', () => 
 {
 	mark = 'o'

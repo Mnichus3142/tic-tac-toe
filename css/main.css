@@ -33,12 +33,15 @@
     border-radius: 30px;
     height: 17vh;
     width: fit-content;
+    min-width: 150px;
 
     padding: 40px;
 
     opacity: 0%;
 
     font-size: larger;
+
+    text-align: center;
 }
 
 .gameover .reset
